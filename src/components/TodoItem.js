@@ -3,7 +3,11 @@ import React from "react"
 class TodoItem extends React.Component {
   render() {
     
-    return <input type="checkbox" /> {this.props.todo.title}
+    return <input
+    type="checkbox"
+    checked={this.props.todo.completed}
+    onChange={() => console.log("clicked")}
+  />
   }
 }
 
